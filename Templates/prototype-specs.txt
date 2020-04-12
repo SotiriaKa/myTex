@@ -1,0 +1,5 @@
+Article Templates\\article-template.tex
+Report Templates\\report-template.tex
+Letter Templates\\letter-template.tex
+Book Templates\\book-template.tex
+Empty Templates\\empty-template.tex

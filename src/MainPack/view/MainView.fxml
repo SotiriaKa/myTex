@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPack.view.MainViewController">
+   <children>
+      <HBox layoutX="108.0" spacing="10.0" style="-fx-background-color: #A03324;" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#newFile" style="-fx-background-color: #6A2218;" text="New File" textFill="#f8c28f" />
+            <Button mnemonicParsing="false" onAction="#openFile" style="-fx-background-color: #6A2218;" text="Open File" textFill="#f8c28f" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #6A2218;" text="Delete File" textFill="#f8c28f" />
+            <Button minWidth="50.0" mnemonicParsing="false" onAction="#save" style="-fx-background-color: #6A2218;" text="Save" textFill="#f8c28f" />
+            <Button fx:id="enableVersionbutton" mnemonicParsing="false" onAction="#enableVersion" style="-fx-background-color: #6A2218;" text="Disable" textFill="#f8c28f" />
+            <Button fx:id="commitVersionbutton" minWidth="50.0" mnemonicParsing="false" onAction="#takeVersions" style="-fx-background-color: #6A2218;" text="Commit Version" textFill="#f8c28f" />
+            <ComboBox fx:id="versionsStrategyBox" minWidth="100.0" onAction="#changeVersion" style="-fx-background-color: #6A2218;" />
+            <Button minWidth="40.0" mnemonicParsing="false" onAction="#RollbackToPreviousVersion" prefHeight="25.0" prefWidth="37.0" style="-fx-background-color: #6A2218;" text="&lt;--" textFill="#f8c28f" />
+            <Button layoutX="511.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #6A2218;" text="Help" textFill="#f8c28f" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+      <VBox alignment="CENTER" prefHeight="500.0" spacing="10.0" style="-fx-background-color: #A03324;">
+         <children>
+            <Button fx:id="chapterMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedChapter" style="-fx-background-color: #6A2218;" text="Chapter" textFill="#f8c28f" />
+            <Button fx:id="sectionMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedSection" style="-fx-background-color: #6A2218;" text="Section" textFill="#f8c28f" />
+            <Button fx:id="subsectionMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedSubsection" style="-fx-background-color: #6A2218;" text="Subsection" textFill="#f8c28f" />
+            <Button fx:id="subsubsectionMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedSubsubsection" style="-fx-background-color: #6A2218;" text="Subsubsection" textFill="#f8c28f" />
+            <Button fx:id="itemizationListMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedItemizationList" style="-fx-background-color: #6A2218;" text="ItemizationList" textFill="#f8c28f" />
+            <Button fx:id="enumerationListMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedEnumerationList" style="-fx-background-color: #6A2218;" text="EnumerationList" textFill="#f8c28f" />
+            <Button fx:id="tableMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedTABLE" style="-fx-background-color: #6A2218;" text="Table" textFill="#f8c28f" />
+            <Button fx:id="figureMenubutton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#commandSelectedFIGURE" style="-fx-background-color: #6A2218;" text="Figure" textFill="#f8c28f" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0" />
+         </padding>
+      </VBox>
+      <TabPane fx:id="tabpane" layoutX="108.0" layoutY="35.0" prefHeight="465.0" prefWidth="686.0" tabClosingPolicy="ALL_TABS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="108.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0" />
+   </children>
+</AnchorPane>
